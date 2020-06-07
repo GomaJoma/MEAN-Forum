@@ -1,0 +1,52 @@
+<div class="forum-header pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Forum</h1>
+  <p class="lead">The most interesting posts about our lifes.</p>
+</div>
+<div class="container">
+  <div *ngIf="authService.isLoggedIn() && !isEditFieldShown" class="card-deck mb-3 text-center">
+    <div class="form-container">
+      <form  #form="ngForm" (ngSubmit)="sharePost(); form.reset()">
+        <div class="form-header-container card-header">
+          <h4 class="mb-2 font-weight-normal">Post header</h4>
+          <input class="form-input" autocomplete="off" [(ngModel)]="header" type="text " name="header">
+        </div>
+        <div class="form-content-container card-body">
+          <h1 class="card-title pricing-card-title">Post text</h1>
+          <textarea class="form-textarea" [(ngModel)]="content" name="content" rows="8"></textarea>
+          <button type="submit" class="home-btn btn btn-lg btn-block">Share Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngFor="let post of posts" class="">
+    <div class="form-container">
+      <form>
+          <div *ngIf="isEditFieldShown && (editFieldId == post._id)" class="edit-post-container">
+            <div class="form-header-container card-header">
+              <input class="form-input" [(ngModel)]="editedHeader" type="text" name="editedHeader" value="{{post.header}}">
+            </div>
+            <div class="form-content-container card-body">
+              <textarea class="form-textarea" [(ngModel)]="editedContent" name="editedContent" rows="8" cols="80">{{post.content}}</textarea>
+            </div>
+            <div class="post-btn-container container justify-content-between">
+              <button class="home-btn btn btn-lg" type="submit" name="cancelChanges" (click)="cancelNewChanges()">Cancel</button>
+              <button class="home-btn btn btn-lg" type="submit" name="submitChanges" (click)="editPost(post._id)">Submit</button>
+            </div>
+          </div>
+      </form>
+    </div>
+    <div *ngIf="!isEditFieldShown || !(editFieldId == post._id)" class="post-container">
+      <h2 class="post-header text-center">{{post.header}}</h2>
+      <p class="post-content text-justify">{{post.content}}</p>
+      <div *ngIf="authService.isLoggedIn() && !isEditFieldShown" class="post-btn-container container justify-content-between">
+        <button class="home-btn btn btn-lg" type="button"
+         name="edit" (click)="replacePostByEditForm(post)">Edit Post</button>
+        <button class="home-btn btn btn-lg" type="button"
+         name="delete" (click)="deletePost(post._id)">Delete Post</button>
+      </div>
+    </div>
+    <br>
+  </div>
+
+
+</div>

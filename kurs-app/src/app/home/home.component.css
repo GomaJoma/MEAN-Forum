@@ -1,0 +1,92 @@
+/* Page */
+.forum-header {
+  color: #FFF;
+}
+
+/* Form */
+.form-container {
+  background-color: #666;
+  width: 80%;
+  margin: 0 auto;
+  /* padding-bottom: 10px;  */
+  border-radius: 5px;
+}
+
+.form-header-container {
+  color: #fff;
+  background-color: #444;
+}
+
+.form-content-container {
+  color: #fff;
+}
+
+.form-input {
+  border-radius: 5px;
+  outline: 0;
+  -moz-appearance: none;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.form-textarea {
+  width: 80%;
+  border-radius: 10px;
+  outline: 0;
+  border: 2px solid silver;
+  padding-left: 10px;
+  -moz-appearance: none;
+  resize: none;
+}
+
+/* Buttons */
+.home-btn {
+  background-color: #fff;
+  color: rgba(255, 37, 26, 1);
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.home-btn:hover {
+  background-color: rgba(255, 37, 26, 1);
+  color: #fff;
+}
+
+.post-btn-container {
+  width: 98.5%;
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+/* Post */
+.edit-post-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.post-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #666;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.post-header {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.post-content {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  color: #222;
+  /* background-color: white; */
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}

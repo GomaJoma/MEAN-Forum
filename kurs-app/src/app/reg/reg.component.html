@@ -1,0 +1,8 @@
+<h1 class="title">Registration page</h1><br>
+<form (submit)="userRegistrClick()">
+  <input type="text" [(ngModel)]="login" name="login" placeholder="Login" class="form-control"><br>
+  <input type="text" [(ngModel)]="email" name="email" placeholder="Email" class="form-control"><br>
+  <input type="password" [(ngModel)]="password" name="password" placeholder="Password" class="form-control"><br>
+
+  <button type="submit" class=" button btn">Sign Up</button>
+</form>

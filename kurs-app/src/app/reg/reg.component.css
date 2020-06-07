@@ -1,0 +1,19 @@
+/* Page */
+.title {
+  color: #fff;
+}
+
+/* Buttons */
+.button {
+  background-color: #fff;
+  color: rgba(255, 37, 26, 1);
+  font-weight: 500;
+  margin-top: 5px;
+  /* border: 2px solid red; */
+}
+
+.button:hover {
+  background-color: rgba(255, 37, 26, 1);
+  /* border: 2px solid white; */
+  color: #fff;
+}

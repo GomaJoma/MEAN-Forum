@@ -1,0 +1,22 @@
+{
+  "name": "kursach",
+  "version": "1.0.0",
+  "description": "This is the small homework application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "jsonwebtoken": "*"
+  },
+  "author": "Gamayunov D.M.",
+  "license": "ISC"
+}
